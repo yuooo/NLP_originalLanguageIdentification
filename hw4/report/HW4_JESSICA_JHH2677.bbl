@@ -1,0 +1,33 @@
+\begin{thebibliography}{1}
+
+\bibitem{brooke2012measuring}
+Julian Brooke and Graeme Hirst.
+\newblock Measuring interlanguage: Native language identification with
+  l1-influence metrics.
+\newblock In {\em LREC}, pages 779--784, 2012.
+
+\bibitem{brooke2012robust}
+Julian Brooke and Graeme Hirst.
+\newblock Robust, lexicalized native language identification.
+\newblock 2012.
+
+\bibitem{tetreault2013report}
+Joel Tetreault, Daniel Blanchard, and Aoife Cahill.
+\newblock A report on the first native language identification shared task.
+\newblock In {\em Proceedings of the eighth workshop on innovative use of NLP
+  for building educational applications}, pages 48--57. Citeseer, 2013.
+
+\bibitem{wong2009contrastive}
+Sze-Meng~Jojo Wong and Mark Dras.
+\newblock Contrastive analysis and native language identification.
+\newblock {\em Proceedings of the Australasian Language Technology Association
+  Workshop}, pages 53--61, 2009.
+
+\bibitem{wong2011exploiting}
+Sze-Meng~Jojo Wong and Mark Dras.
+\newblock Exploiting parse structures for native language identification.
+\newblock In {\em Proceedings of the Conference on Empirical Methods in Natural
+  Language Processing}, pages 1600--1610. Association for Computational
+  Linguistics, 2011.
+
+\end{thebibliography}

@@ -1,0 +1,138 @@
+\documentclass[10pt]{article}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{url}
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\usepackage{wasysym}
+\usepackage{amssymb }
+\usepackage{caption}
+\usepackage{tikz}
+
+%\usepackage{fontspec}
+%\setmainfont{Hoefler Text}
+
+\newcommand*\Let[2]{\State #1 $\gets$ #2}
+%\algrenewcommand\alglinenumber[1]{
+   % {\sf\footnotesize\addfontfeatures{Colour=888888,Numbers=Monospaced}#1}}
+\algrenewcommand\algorithmicrequire{\textbf{Precondition:}}
+\algrenewcommand\algorithmicensure{\textbf{Postcondition:}}
+
+\RequirePackage[l2tabu, orthodox]{nag}
+
+
+\usepackage{amsmath,amssymb,amsthm}
+
+\DeclareMathOperator*{\E}{\mathbb{E}}
+\let\Pr\relax
+\DeclareMathOperator*{\Pr}{\mathbb{P}}
+
+\newcommand{\eps}{\epsilon}
+\newcommand{\inprod}[1]{\left\langle #1 \right\rangle}
+\newcommand{\R}{\mathbb{R}}
+
+\newcommand{\handout}[5]{
+  \noindent
+  \begin{center}
+  \framebox{
+    \vbox{
+      \hbox to 5.78in { {\bf CS 388: Natural Language Processing} \hfill #2 }
+      \vspace{4mm}
+      \hbox to 5.78in { {\Large \hfill #5  \hfill} }
+      \vspace{2mm}
+      \hbox to 5.78in { {\em #3 \hfill #4} }
+    }
+  }
+  \end{center}
+  \vspace*{4mm}
+}
+
+\newcommand{\ps}[4]{\handout{#1}{#2}{#3}{Student: #4}{Problem Set #1}}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{assumption}[theorem]{Assumption}
+
+% 1-inch margins, from fullpage.sty by H.Partl, Version 2, Dec. 15, 1988.
+\topmargin 0pt
+\advance \topmargin by -\headheight
+\advance \topmargin by -\headsep
+\textheight 8.9in
+\oddsidemargin 0pt
+\evensidemargin \oddsidemargin
+\marginparwidth 0.5in
+\textwidth 6.5in
+
+\parindent 0in
+\parskip 1.5ex
+
+\renewcommand\thesubsection{(\alph{subsection})}
+
+%%% START
+
+\begin{document}
+
+\ps{4 --- April 21, 2016}{Spring 2016}{Prof.\ Ray Mooney, TA Swadhin Pradhan }{Jessica Hoffmann}
+
+\section{Our project and this paper}
+\textbf{Our project:\\}
+Our project is about Original Language Identification. From a text in English translated by a human from another language, our goal is to identify the original language of the text. 
+
+\textbf{Chosen paper:\\}
+The paper I've chosen is \emph{Exploiting Parse Structures for Native Language Identification} by Wong and Dras (2011) \cite{wong2011exploiting}. If Native Language Identification (abbreviated NLI is the rest of the text) is not exactly the same task as Original Language Identification, the tasks share some strong similarities. We expect to transfer some of the technics from this paper to our task.
+
+\section{Paper summary}
+\subsection*{One sentence summary}
+By including parse features, this paper reduces the error in NLI up to 30\% compared to using lexical features only.
+\subsection*{Data}
+The data is the \emph{International Corpus of Learner English} (ICLE), compiled for the task of NLI. All the writers are supposed to have the same English proficiency as well as the same age range. It's a classical corpus in NLI. The dataset they use contains 7 languages, with 95 essays by language. After splitting, they get 17,718 train sentences and 6,791 test sentences.
+
+
+\subsection*{Features}
+\textbf{Lexical features \\}
+Based on previous studies, they've established that the best set of lexical features they can use is:
+\begin{itemize}
+\item a list of function words empirically established in \cite{wong2009contrastive} (binary feature)
+\item character bi-grams (best performing n-grams) (frequency feature)
+\item the most frequently occurring PoS bi-grams and tri-grams, obtained by using the Brill tagger provided in NLTK being trained on the Brown corpus (binary feature)
+\end{itemize}
+
+They also introduce a set of parse features:
+
+
+\subsection*{Algorithms}
+After ruling out an SVM classifier, they use a MaxEnt machine learner.
+
+
+\section{Relation to our project}
+\subsection{Limitations}
+We believe this paper uses the parse features in a very restricted way. In particular, binarizing the features seems particularly uncalled for here. \\
+Contrary to their task, literary translations won't be prone to errors. A big part of NLI is identifying which native language will lead to which type of error, which is completely irrelevant in our task. \\
+Their task is also limited in size, since they're using a classical corpus, when we can use any book in the public domain that has an English translation.
+
+\subsection{Extensions}
+Since we're not limited to a single corpus, we will use a large amount of books (or chapters from books), using cross-corpus evaluations in the manner of \cite{brooke2012robust}. \\
+We will keep the lexical features mentioned in the paper, and maybe add the rare features described in \cite{brooke2012measuring}. We also want to add "homemade" lexical features based on the etymology of the words used in the case of synonyms (for instance, you may be more likely to use \emph{damnation} rather than \emph{doom} if you're translating from a latin language, and inversely if you're translating from a germanic language. \\
+We also want to improve the parse features, \cite{}. \\
+We want to also add a bunch of general features, including size of sentences, frequency of pronouns, active/passive voice etc.
+We will also try a larger set of algorithms, following the lead of \cite{tetreault2013report} including Random Forest, SVM, and Gradient Boosting methods, or an ensemble of them, which are well-known to perform well on classification tasks.
+
+
+
+\bibliographystyle{plain}
+\bibliography{bib}
+
+
+
+\end{document}

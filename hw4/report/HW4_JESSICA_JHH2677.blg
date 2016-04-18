@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: HW4_JESSICA_JHH2677.aux
+The style file: plain.bst
+Database file #1: bib.bib
+Warning--empty journal in brooke2012robust
+You've used 5 entries,
+            2118 wiz_defined-function locations,
+            524 strings with 4888 characters,
+and the built_in function-call counts, 2059 in all, are:
+= -- 217
+> -- 70
+< -- 4
++ -- 28
+- -- 22
+* -- 114
+:= -- 306
+add.period$ -- 17
+call.type$ -- 5
+change.case$ -- 26
+chr.to.int$ -- 0
+cite$ -- 6
+duplicate$ -- 97
+empty$ -- 170
+format.name$ -- 22
+if$ -- 468
+int.to.chr$ -- 0
+int.to.str$ -- 5
+missing$ -- 5
+newline$ -- 28
+num.names$ -- 10
+pop$ -- 37
+preamble$ -- 1
+purify$ -- 21
+quote$ -- 0
+skip$ -- 83
+stack$ -- 0
+substring$ -- 146
+swap$ -- 41
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 20
+warning$ -- 1
+while$ -- 22
+width$ -- 6
+write$ -- 57
+(There was 1 warning)

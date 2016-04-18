@@ -1,0 +1,20 @@
+Classic features:
+    Lexical features:
+        - function word -> dafuq is that?
+        - n-gram for character
+        - POS bigrams
+    Parse features:
+        - slices of trees
+
+Our own features:
+    - length of sentences
+    - root of word for homonymes
+    - frequency of native language sound ?
+    - pronoun frequency
+    - number of different tenses
+
+Methodology errors:
+    - use the same translator
+    - use the same book for train and test
+    - use a small control group
+    - forget std
