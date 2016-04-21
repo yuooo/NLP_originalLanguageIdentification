@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.26)  17 APR 2016 21:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.8.26)  21 APR 2016 13:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -897,14 +897,7 @@ line 84.
 Package nag Warning: Command \bf is an old LaTeX 2.09 command. 
 (nag)                Use \bfseries or \textbf instead on input line 86.
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 106.
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 106.
- [1
+[1
 
 {/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 (./HW4_JESSICA_JHH2677.bbl) [2]
@@ -913,24 +906,23 @@ Package nag Warning: 1 complaints in total.
 
 (./HW4_JESSICA_JHH2677.aux) ) 
 Here is how much of TeX's memory you used:
- 16524 strings out of 493089
- 308830 string characters out of 6134842
- 394565 words of memory out of 5000000
- 19663 multiletter control sequences out of 15000+600000
- 6697 words of font info for 39 fonts, out of 8000000 for 9000
+ 16511 strings out of 493089
+ 308542 string characters out of 6134842
+ 395565 words of memory out of 5000000
+ 19648 multiletter control sequences out of 15000+600000
+ 6850 words of font info for 42 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,6n,54p,490b,151s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,6n,54p,491b,151s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/pu
 blic/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pub
 lic/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publ
 ic/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmr12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmti10.pfb>
-Output written on HW4_JESSICA_JHH2677.pdf (2 pages, 91170 bytes).
+msfonts/cm/cmti10.pfb>
+Output written on HW4_JESSICA_JHH2677.pdf (2 pages, 85405 bytes).
 PDF statistics:
- 38 PDF objects out of 1000 (max. 8388607)
- 27 compressed objects within 1 object stream
+ 34 PDF objects out of 1000 (max. 8388607)
+ 24 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  8205 words of extra memory for PDF output out of 10000 (max. 10000000)
 
