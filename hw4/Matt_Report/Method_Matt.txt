@@ -1,0 +1,34 @@
+Methodology derived from paper: Towards the automatic detection of the source language of a
+literary translation
+
+What they do:
+-Use Weka for machine learning, and TagHelpertools package (from Donmez et al 2005) to support natural language data in Weka.
+     -Methodologies: Baseline, SMO (implements SVM), Simple Logistic, and Naive Bayes.
+-Use 20 different texts, 5 in each of English, French, Russian, and German.
+-Take about 200 kb from each test and divide these up into 20 chunks of 10 kb each.
+-Use n-gram features: word-unigrams and POS bigrams, but removed proper nouns.
+-Focused on closed-form words (prepositions, contractions, etc).
+
+Strengths:
+-They consider common words that are easily comparable to other languages.
+-They 
+
+Weaknesses:
+-Relies on TreeTagger POS tagger from 1994, which may be outdated. I think making the POS tagger more accurate could help improve more results. The key thing is 1994 was before the CRF was invented, so I wonder if it's better to rely on a CRF instead. (UPDATE:) This parser is using decision trees, as opposed to Markov Models. However, this methodology was formulated THE SAME YEAR HMMs first came out. It could be outdated but it's difficult to say for sure if it is. Why they chose this wasn't justified at all.
+    So... according to a StackOverflow answer, it's interesting because the TreeTagger, which is based on C, is more opaque and open to corrections. But are we really gonna corect a bunch of things? It also looks like TreeTagger is a fast runner. So I think there's some validity to the choice here.
+-I feel like there isn't a lot of substance to this paper, but maybe that's because I don't understand the classification methods. Nah... there is.
+-Toward appears twice in Table 9 with different frequencies. Have no idea why.
+-They exploit some of the features that were mentioned in the translation detection.
+-They use a POS tagger but they don't attempt to try and see if structures of sentences also have some sort of matching.
+-They chunk the texts in kb, but not sentences. I found this interesting... Not sure if it's a weakness.
+-Not considering words which are clearly from a specific language... that's a bit of a shocking thing. Is it possible to have dictionaries that look this sort of thing up if it's an OOV English word, or would it be too time intensive to do?
+-Might be overfitting with the 10 f-cv runs.
+-We can use something that performs better than chi-squared: information gain might work better.
+-Same train source and test source. BAD!!!
+
+What we should do:
+-Try our own POS tagger using a CRF, instead of something from 1994? Maybe Mallet would be good. 
+-Use parse trees to see if these can also be used as a predictive factor. Possibly with the Stanford EnglishPCFG that's already provided? (Would tagging the words with Mallet POS be better or would using all-out Stanford be better?)
+-Would be really interesting to try some out-of-domain training to see if the annotated Brown corpus can be used for training things in English, or if 19th century English texts are better, or if the default Stanford English Treebank would be better. 
+-I'd be really, really curious to see if we can use the Neural Network Stanford Parser to get better results too.
+-See if we can use words clearly unique to a certain language to better identify text translation.
